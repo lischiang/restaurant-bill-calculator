@@ -34,6 +34,11 @@
             this.comboBoxMainCourse = new System.Windows.Forms.ComboBox();
             this.comboBoxDessert = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -46,17 +51,16 @@
             this.lblCurrency1 = new System.Windows.Forms.Label();
             this.lblCurrency2 = new System.Windows.Forms.Label();
             this.lblCurrency3 = new System.Windows.Forms.Label();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblBeverage = new System.Windows.Forms.Label();
+            this.lblAppetizer = new System.Windows.Forms.Label();
+            this.lblMainCourse = new System.Windows.Forms.Label();
+            this.lblDessert = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // userControlStatusBarLisaChiang_3009251221
             // 
-            this.userControlStatusBarLisaChiang_3009251221.Location = new System.Drawing.Point(0, 2);
+            this.userControlStatusBarLisaChiang_3009251221.Location = new System.Drawing.Point(0, 5);
             this.userControlStatusBarLisaChiang_3009251221.Name = "userControlStatusBarLisaChiang_3009251221";
             this.userControlStatusBarLisaChiang_3009251221.Size = new System.Drawing.Size(1030, 514);
             this.userControlStatusBarLisaChiang_3009251221.TabIndex = 0;
@@ -75,7 +79,6 @@
             this.comboBoxBeverage.Name = "comboBoxBeverage";
             this.comboBoxBeverage.Size = new System.Drawing.Size(121, 21);
             this.comboBoxBeverage.TabIndex = 1;
-            this.comboBoxBeverage.Text = "Beverage";
             this.comboBoxBeverage.SelectedIndexChanged += new System.EventHandler(this.comboBoxBeverage_SelectedIndexChanged);
             // 
             // comboBoxAppetizer
@@ -93,7 +96,7 @@
             this.comboBoxAppetizer.Name = "comboBoxAppetizer";
             this.comboBoxAppetizer.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAppetizer.TabIndex = 2;
-            this.comboBoxAppetizer.Text = "Appetizer";
+            this.comboBoxAppetizer.SelectedIndexChanged += new System.EventHandler(this.comboBoxAppetizer_SelectedIndexChanged);
             // 
             // comboBoxMainCourse
             // 
@@ -112,7 +115,6 @@
             this.comboBoxMainCourse.Name = "comboBoxMainCourse";
             this.comboBoxMainCourse.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMainCourse.TabIndex = 3;
-            this.comboBoxMainCourse.Text = "Main Course";
             // 
             // comboBoxDessert
             // 
@@ -127,7 +129,6 @@
             this.comboBoxDessert.Name = "comboBoxDessert";
             this.comboBoxDessert.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDessert.TabIndex = 4;
-            this.comboBoxDessert.Text = "Dessert";
             // 
             // dataGridView1
             // 
@@ -146,6 +147,37 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 200;
+            // 
+            // ProductCategory
+            // 
+            this.ProductCategory.HeaderText = "Product Category";
+            this.ProductCategory.Name = "ProductCategory";
+            this.ProductCategory.ReadOnly = true;
+            this.ProductCategory.Width = 200;
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.HeaderText = "Product Price";
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // ProductTotal
+            // 
+            this.ProductTotal.HeaderText = "Product Total";
+            this.ProductTotal.Name = "ProductTotal";
+            this.ProductTotal.ReadOnly = true;
+            // 
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(842, 155);
@@ -154,6 +186,7 @@
             this.btnRemove.TabIndex = 6;
             this.btnRemove.Text = "Remove Item";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnCheckOut
             // 
@@ -173,6 +206,7 @@
             this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblSubtotal
             // 
@@ -255,42 +289,51 @@
             this.lblCurrency3.TabIndex = 17;
             this.lblCurrency3.Text = "CAD$";
             // 
-            // ProductName
+            // lblBeverage
             // 
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 200;
+            this.lblBeverage.AutoSize = true;
+            this.lblBeverage.Location = new System.Drawing.Point(28, 13);
+            this.lblBeverage.Name = "lblBeverage";
+            this.lblBeverage.Size = new System.Drawing.Size(53, 13);
+            this.lblBeverage.TabIndex = 18;
+            this.lblBeverage.Text = "Beverage";
             // 
-            // ProductCategory
+            // lblAppetizer
             // 
-            this.ProductCategory.HeaderText = "Product Category";
-            this.ProductCategory.Name = "ProductCategory";
-            this.ProductCategory.ReadOnly = true;
-            this.ProductCategory.Width = 200;
+            this.lblAppetizer.AutoSize = true;
+            this.lblAppetizer.Location = new System.Drawing.Point(183, 13);
+            this.lblAppetizer.Name = "lblAppetizer";
+            this.lblAppetizer.Size = new System.Drawing.Size(51, 13);
+            this.lblAppetizer.TabIndex = 19;
+            this.lblAppetizer.Text = "Appetizer";
             // 
-            // ProductPrice
+            // lblMainCourse
             // 
-            this.ProductPrice.HeaderText = "Product Price";
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.ReadOnly = true;
+            this.lblMainCourse.AutoSize = true;
+            this.lblMainCourse.Location = new System.Drawing.Point(336, 13);
+            this.lblMainCourse.Name = "lblMainCourse";
+            this.lblMainCourse.Size = new System.Drawing.Size(66, 13);
+            this.lblMainCourse.TabIndex = 20;
+            this.lblMainCourse.Text = "Main Course";
             // 
-            // Quantity
+            // lblDessert
             // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // ProductTotal
-            // 
-            this.ProductTotal.HeaderText = "Product Total";
-            this.ProductTotal.Name = "ProductTotal";
-            this.ProductTotal.ReadOnly = true;
+            this.lblDessert.AutoSize = true;
+            this.lblDessert.Location = new System.Drawing.Point(495, 13);
+            this.lblDessert.Name = "lblDessert";
+            this.lblDessert.Size = new System.Drawing.Size(43, 13);
+            this.lblDessert.TabIndex = 21;
+            this.lblDessert.Text = "Dessert";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 518);
+            this.Controls.Add(this.lblDessert);
+            this.Controls.Add(this.lblMainCourse);
+            this.Controls.Add(this.lblAppetizer);
+            this.Controls.Add(this.lblBeverage);
             this.Controls.Add(this.lblCurrency3);
             this.Controls.Add(this.lblCurrency2);
             this.Controls.Add(this.lblCurrency1);
@@ -342,6 +385,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductTotal;
+        private System.Windows.Forms.Label lblBeverage;
+        private System.Windows.Forms.Label lblAppetizer;
+        private System.Windows.Forms.Label lblMainCourse;
+        private System.Windows.Forms.Label lblDessert;
     }
 }
 
