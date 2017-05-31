@@ -1,6 +1,6 @@
 ﻿namespace RestaurantBillCalculator
 {
-    partial class Form1
+    partial class BillCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -115,6 +115,7 @@
             this.comboBoxMainCourse.Name = "comboBoxMainCourse";
             this.comboBoxMainCourse.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMainCourse.TabIndex = 3;
+            this.comboBoxMainCourse.SelectedIndexChanged += new System.EventHandler(this.comboBoxMainCourse_SelectedIndexChanged);
             // 
             // comboBoxDessert
             // 
@@ -129,6 +130,7 @@
             this.comboBoxDessert.Name = "comboBoxDessert";
             this.comboBoxDessert.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDessert.TabIndex = 4;
+            this.comboBoxDessert.SelectedIndexChanged += new System.EventHandler(this.comboBoxDessert_SelectedIndexChanged);
             // 
             // dataGridView1
             // 

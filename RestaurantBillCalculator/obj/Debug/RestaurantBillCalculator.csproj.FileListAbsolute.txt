@@ -4,8 +4,8 @@ c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\bin\Debug\UserControlStatusBarLisaChiang_300925122.dll
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\bin\Debug\UserControlStatusBarLisaChiang_300925122.pdb
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.csprojResolveAssemblyReference.cache
-c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.Form1.resources
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.Properties.Resources.resources
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.csproj.GenerateResource.Cache
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.exe
 c:\users\lisalisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.pdb
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\RestaurantBillCalculator\obj\Debug\RestaurantBillCalculator.BillCalculator.resources
