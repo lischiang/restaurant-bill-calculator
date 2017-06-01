@@ -1,6 +1,6 @@
-﻿namespace UserControlStatusBarLisaChiang_300925122
+﻿namespace StatusBar_LisaChiang_300925122
 {
-    partial class UserControlStatusBarLisaChiang_300925122
+    partial class StatusBar
     {
         /// <summary>
         /// Required designer variable.
@@ -20,15 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify 
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlStatusBarLisaChiang_300925122));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatusBar));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
@@ -38,28 +38,27 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 257);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 366);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(376, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(509, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel1.Image")));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(150, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(149, 17);
             this.toolStripStatusLabel1.Text = "Lisa Chiang - 300925122";
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
-            // UserControl1
+            // StatusBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(509, 388);
             this.Controls.Add(this.statusStrip1);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(376, 279);
+            this.Name = "StatusBar";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -73,3 +72,4 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
+

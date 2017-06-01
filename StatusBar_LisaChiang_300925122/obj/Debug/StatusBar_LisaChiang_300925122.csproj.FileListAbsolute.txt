@@ -1,0 +1,9 @@
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\bin\Debug\StatusBar_LisaChiang_300925122.dll.config
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\bin\Debug\StatusBar_LisaChiang_300925122.dll
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\bin\Debug\StatusBar_LisaChiang_300925122.pdb
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\obj\Debug\StatusBar_LisaChiang_300925122.csprojResolveAssemblyReference.cache
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\obj\Debug\StatusBar_LisaChiang_300925122.StatusBar.resources
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\obj\Debug\StatusBar_LisaChiang_300925122.Properties.Resources.resources
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\obj\Debug\StatusBar_LisaChiang_300925122.csproj.GenerateResource.Cache
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\obj\Debug\StatusBar_LisaChiang_300925122.dll
+C:\Users\LisaLisa\documents\visual studio 2015\Projects\RestaurantBillCalculator\StatusBar_LisaChiang_300925122\obj\Debug\StatusBar_LisaChiang_300925122.pdb

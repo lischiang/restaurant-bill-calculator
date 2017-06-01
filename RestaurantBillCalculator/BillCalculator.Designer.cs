@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userControlStatusBarLisaChiang_3009251221 = new UserControlStatusBarLisaChiang_300925122.UserControlStatusBarLisaChiang_300925122();
             this.comboBoxBeverage = new System.Windows.Forms.ComboBox();
             this.comboBoxAppetizer = new System.Windows.Forms.ComboBox();
             this.comboBoxMainCourse = new System.Windows.Forms.ComboBox();
@@ -57,13 +56,6 @@
             this.lblDessert = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // userControlStatusBarLisaChiang_3009251221
-            // 
-            this.userControlStatusBarLisaChiang_3009251221.Location = new System.Drawing.Point(0, 5);
-            this.userControlStatusBarLisaChiang_3009251221.Name = "userControlStatusBarLisaChiang_3009251221";
-            this.userControlStatusBarLisaChiang_3009251221.Size = new System.Drawing.Size(1030, 514);
-            this.userControlStatusBarLisaChiang_3009251221.TabIndex = 0;
             // 
             // comboBoxBeverage
             // 
@@ -147,6 +139,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(744, 187);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // ProductName
@@ -182,7 +175,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(842, 155);
+            this.btnRemove.Location = new System.Drawing.Point(826, 155);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(124, 44);
             this.btnRemove.TabIndex = 6;
@@ -192,7 +185,7 @@
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.Location = new System.Drawing.Point(842, 227);
+            this.btnCheckOut.Location = new System.Drawing.Point(826, 227);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(124, 42);
             this.btnCheckOut.TabIndex = 7;
@@ -202,7 +195,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(842, 299);
+            this.btnClear.Location = new System.Drawing.Point(826, 299);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(124, 43);
             this.btnClear.TabIndex = 8;
@@ -327,11 +320,11 @@
             this.lblDessert.TabIndex = 21;
             this.lblDessert.Text = "Dessert";
             // 
-            // Form1
+            // BillCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 518);
+            this.ClientSize = new System.Drawing.Size(999, 518);
             this.Controls.Add(this.lblDessert);
             this.Controls.Add(this.lblMainCourse);
             this.Controls.Add(this.lblAppetizer);
@@ -353,9 +346,29 @@
             this.Controls.Add(this.comboBoxMainCourse);
             this.Controls.Add(this.comboBoxAppetizer);
             this.Controls.Add(this.comboBoxBeverage);
-            this.Controls.Add(this.userControlStatusBarLisaChiang_3009251221);
-            this.Name = "Form1";
+            this.Name = "BillCalculator";
             this.Text = "Form1";
+            this.Controls.SetChildIndex(this.comboBoxBeverage, 0);
+            this.Controls.SetChildIndex(this.comboBoxAppetizer, 0);
+            this.Controls.SetChildIndex(this.comboBoxMainCourse, 0);
+            this.Controls.SetChildIndex(this.comboBoxDessert, 0);
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.btnRemove, 0);
+            this.Controls.SetChildIndex(this.btnCheckOut, 0);
+            this.Controls.SetChildIndex(this.btnClear, 0);
+            this.Controls.SetChildIndex(this.lblSubtotal, 0);
+            this.Controls.SetChildIndex(this.lblTax, 0);
+            this.Controls.SetChildIndex(this.lblTotal, 0);
+            this.Controls.SetChildIndex(this.txtSubtotal, 0);
+            this.Controls.SetChildIndex(this.txtTax, 0);
+            this.Controls.SetChildIndex(this.txtTotal, 0);
+            this.Controls.SetChildIndex(this.lblCurrency1, 0);
+            this.Controls.SetChildIndex(this.lblCurrency2, 0);
+            this.Controls.SetChildIndex(this.lblCurrency3, 0);
+            this.Controls.SetChildIndex(this.lblBeverage, 0);
+            this.Controls.SetChildIndex(this.lblAppetizer, 0);
+            this.Controls.SetChildIndex(this.lblMainCourse, 0);
+            this.Controls.SetChildIndex(this.lblDessert, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -363,8 +376,6 @@
         }
 
         #endregion
-
-        private UserControlStatusBarLisaChiang_300925122.UserControlStatusBarLisaChiang_300925122 userControlStatusBarLisaChiang_3009251221;
         private System.Windows.Forms.ComboBox comboBoxBeverage;
         private System.Windows.Forms.ComboBox comboBoxAppetizer;
         private System.Windows.Forms.ComboBox comboBoxMainCourse;

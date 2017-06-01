@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UserControlStatusBarLisaChiang_300925122
+namespace StatusBar_LisaChiang_300925122
 {
-    public partial class UserControlStatusBarLisaChiang_300925122: UserControl
+    public partial class StatusBar : Form
     {
-        public UserControlStatusBarLisaChiang_300925122()
+        public StatusBar()
         {
             InitializeComponent();
         }

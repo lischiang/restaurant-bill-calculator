@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantBillCalculator", "RestaurantBillCalculator\RestaurantBillCalculator.csproj", "{00A41349-2473-4253-809F-5F5ED887BBE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlStatusBarLisaChiang_300925122", "UserControlStatusBarLisaChiang_300925122\UserControlStatusBarLisaChiang_300925122.csproj", "{3252EF5A-AF76-437F-8485-57DD245BF1A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusBar_LisaChiang_300925122", "StatusBar_LisaChiang_300925122\StatusBar_LisaChiang_300925122.csproj", "{B53D3CAE-3B65-4AD1-8BB9-A5B40B66E789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{00A41349-2473-4253-809F-5F5ED887BBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00A41349-2473-4253-809F-5F5ED887BBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00A41349-2473-4253-809F-5F5ED887BBE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3252EF5A-AF76-437F-8485-57DD245BF1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3252EF5A-AF76-437F-8485-57DD245BF1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3252EF5A-AF76-437F-8485-57DD245BF1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3252EF5A-AF76-437F-8485-57DD245BF1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53D3CAE-3B65-4AD1-8BB9-A5B40B66E789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53D3CAE-3B65-4AD1-8BB9-A5B40B66E789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53D3CAE-3B65-4AD1-8BB9-A5B40B66E789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53D3CAE-3B65-4AD1-8BB9-A5B40B66E789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

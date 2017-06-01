@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace RestaurantBillCalculator
 {
-    public partial class BillCalculator : Form
+    public partial class BillCalculator : StatusBar_LisaChiang_300925122.StatusBar
     {
         public BillCalculator()
         {
@@ -216,6 +216,21 @@ namespace RestaurantBillCalculator
             dataGridView1.Enabled = false;
             btnCheckOut.Enabled = false;
             btnRemove.Enabled = false;
+
+            // Show bill
+            string billContent = "PRINTED BILL\n\n";
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                billContent += "- " + dataGridView1.Rows[i].Cells[0].Value +
+                    " X " + dataGridView1.Rows[i].Cells[3].Value +
+                    "    $ " + dataGridView1.Rows[i].Cells[4].Value + "\n";
+            }
+            billContent += "_________________________\n";
+            billContent += "Subtotal    $ " + txtSubtotal.Text + "\n";
+            billContent += "Tax    $ " + txtTax.Text + "\n\n";
+            billContent += "TOTAL    $ " + txtTotal.Text;
+            MessageBox.Show(billContent);
+
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -268,6 +283,32 @@ namespace RestaurantBillCalculator
                 subtotal += Double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
             }
             txtSubtotal.Text = subtotal.ToString("N2");
+        }
+
+        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            string headerText =
+            dataGridView1.Columns[e.ColumnIndex].HeaderText;
+
+            // Abort validation if cell is not in the Quantity column
+            if (!headerText.Equals("Quantity")) return;
+
+            // Confirm that the cell is not empty.
+            if (string.IsNullOrEmpty(e.FormattedValue.ToString()))
+            {
+                MessageBox.Show("ERROR: insert a quantity for this product.");
+                e.Cancel = true;
+            }
+            else
+            {
+                int n;
+                bool isNumeric = int.TryParse(e.FormattedValue.ToString(), out n);
+                if (!isNumeric)
+                {
+                    MessageBox.Show("ERROR: insert an integer number for the quantity.");
+                    e.Cancel = true;
+                }
+            }
         }
     }
 }
