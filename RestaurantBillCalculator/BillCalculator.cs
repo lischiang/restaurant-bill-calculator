@@ -15,6 +15,30 @@ namespace RestaurantBillCalculator
         public BillCalculator()
         {
             InitializeComponent();
+
+            // Popolate combobox for beverage
+            for (int  i = 0; i<beverage.Length; i++)
+            {
+                comboBoxBeverage.Items.Add(beverage[i] + " - $ " + beveragePrice[i].ToString("N2"));
+            }
+
+            // Popolate combobox for appetizer
+            for (int i = 0; i < appetizer.Length; i++)
+            {
+                comboBoxAppetizer.Items.Add(appetizer[i] + " - $ " + appetizerPrice[i].ToString("N2"));
+            }
+
+            // Popolate combobox for main course
+            for (int i = 0; i < mainCourse.Length; i++)
+            {
+                comboBoxMainCourse.Items.Add(mainCourse[i] + " - $ " + mainCoursePrice[i].ToString("N2"));
+            }
+
+            // Popolate combobox for dessert
+            for (int i = 0; i < dessert.Length; i++)
+            {
+                comboBoxDessert.Items.Add(dessert[i] + " - $ " + dessertPrice[i].ToString("N2"));
+            }
         }
 
         string[] beverage = { "Soda", "Tea", "Coffee", "Mineral Water", "Juice", "Milk" };
@@ -209,6 +233,8 @@ namespace RestaurantBillCalculator
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Processing Check Out...");
+
             double subtotal = Double.Parse(txtSubtotal.Text);
             double tax = subtotal * taxPercentage / 100;
             txtTax.Text = tax.ToString("N2");
@@ -216,21 +242,6 @@ namespace RestaurantBillCalculator
             dataGridView1.Enabled = false;
             btnCheckOut.Enabled = false;
             btnRemove.Enabled = false;
-
-            // Show bill
-            string billContent = "PRINTED BILL\n\n";
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                billContent += "- " + dataGridView1.Rows[i].Cells[0].Value +
-                    " X " + dataGridView1.Rows[i].Cells[3].Value +
-                    "    $ " + dataGridView1.Rows[i].Cells[4].Value + "\n";
-            }
-            billContent += "_________________________\n";
-            billContent += "Subtotal    $ " + txtSubtotal.Text + "\n";
-            billContent += "Tax    $ " + txtTax.Text + "\n\n";
-            billContent += "TOTAL    $ " + txtTotal.Text;
-            MessageBox.Show(billContent);
-
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
